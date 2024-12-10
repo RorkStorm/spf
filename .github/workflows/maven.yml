@@ -36,4 +36,5 @@ jobs:
           mvn initialize org.sonarsource.scanner.maven:sonar-maven-plugin:5.0.0.4389:sonar  \
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.organization=rorkstorm \
-            -Dsonar.projectKey=RorkStorm_spf 
+            -Dsonar.projectKey=RorkStorm_spf \
+            -Dsonar.coverage.jacoco.xmlReportPaths=target/jacoco-report/jacoco.xml

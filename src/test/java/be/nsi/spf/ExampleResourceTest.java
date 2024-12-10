@@ -17,4 +17,9 @@ class ExampleResourceTest {
                 .body(is("Hello from Quarkus REST"));
     }
 
+    @Test
+    public void testShouldReturnFalse() {
+        boolean result = false;
+        assertFalse(result, "The method should return false");
+    }
 }

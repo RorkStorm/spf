@@ -2,6 +2,8 @@ package be.nsi.spf;
 
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import static io.restassured.RestAssured.given;
@@ -21,6 +23,6 @@ class ExampleResourceTest {
     @Test
     public void testShouldReturnFalse() {
         boolean result = false;
-        assertTrue(result, "The method should return false");
+        assertFalse(result, "The method should return false");
     }
 }

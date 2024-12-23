@@ -28,12 +28,13 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Build with Maven
-        run: mvn -B package --file pom.xml
+        run: mvn -B verify --file pom.xml
       - name: Sonar Analysis
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: >
-          mvn initialize org.sonarsource.scanner.maven:sonar-maven-plugin:5.0.0.4389 \
+          mvn initialize org.sonarsource.scanner.maven:sonar-maven-plugin:5.0.0.4389:sonar  \
             -Dsonar.host.url=https://sonarcloud.io \
-            -Dsonar.organization=yvesgab \
-            -Dsonar.projectKey=yvesgab_laboJPA 
+            -Dsonar.organization=rorkstorm \
+            -Dsonar.projectKey=RorkStorm_spf \
+            -Dsonar.coverage.jacoco.xmlReportPaths=target/jacoco-report/jacoco.xml

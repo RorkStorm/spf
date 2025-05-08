@@ -23,6 +23,6 @@ class ExampleResourceTest {
     @Test
     public void testShouldReturnFalse() {
         boolean result = false;
-        assertTrue(result, "The method should return false");
+        assertFalse(result, "The method should return false");
     }
 }
